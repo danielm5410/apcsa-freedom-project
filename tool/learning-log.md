@@ -1,13 +1,13 @@
 # Tool Learning Log
 
-Tool: **X**
+Tool: **Xcode **
 
-Project: **X**
+Project: **Undecided**
 
 ---
 
-X/X/X:
-* Text
+11/6/23:
+I've looked over a little bit of the Xcode documentation to try and figure out what I wanted to make.
 
 X/X/X:
 * Text
