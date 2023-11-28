@@ -1,8 +1,12 @@
 # Entry 1
-##### X/X/XX
+##### 11/27/23
 
-Text
+Currently in the freedom project, we are choosing our tools while learning java. This year I am also working with my partner jimmy and we plan on making a first person shooter game with unreal engine. We would stick with this idea for a few weeks to come to realize unreal engine is hard to learn as we looked through their [documentation](https://docs.unrealengine.com/5.3/en-US/) and we would also take a look at learning C++ as Unreal Engine is ran on [C++](https://www.w3schools.com/cpp/cpp_intro.asp#:~:text=C%2B%2B%20is%20a%20cross-platform,over%20system%20resources%20and%20memory.). When I was tinkering with C++ to try and learn the coding language, I've come to realize that C++ and java is very similar and they are both Object-Oriented Programming languages. C++ syntax is very different from Java but I understood how it worked. With all the tinkering with C++ I would also then come to realize I would have to model the game characters and all that along the way while also programming what each specific thing is going to do. Me and jimmy would then decide to move on to Xcode.
+<br>
+  With [Xcode](https://developer.apple.com/xcode/), we can build apps for apple platforms - making games, an app, etc. Me and jimmy would then decide to make an fps game possible person vs person or maybe person vs environment and we would also try to implement firebase for storage for players. The only problem with Xcode is that we cant tinker with it in class and can only do it at home since you can only code Xcode in macOS and the only mac I have is at home. Along with that I might also have to learn SwiftUI to design apps meaning if I want to learn Xcode for the project we are planning to make, I would have to use firebase, Xcode, and SwiftUI. I've also taken a look into the documentations and the code looks a little challenging as it is something that does not look familiar at all. 
+  <br>
+  Currently in the Engineering Design Process (EDP), I am planning on what to do as for my freedom project and researching topics along with it to help figure out what I want to do for my freedom project. Some skills I am currently develeoping and improving upon is using google to research and how to read to read through the documentations to learn how to use the program and how to code in that coding language.
 
-[Next](entry02.md)
+#### Conclusion
 
-[Home](../README.md)
+Overall, I am probably settled into doing Xcode and making an FPS game in a person vs. person shooter. It'll take some time and dedication but once it pays off, the product will be great.
