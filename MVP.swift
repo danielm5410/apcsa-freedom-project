@@ -23,7 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupPhysicsBody(for enemy: SKSpriteNode) {
           enemy.physicsBody = SKPhysicsBody(rectangleOf: enemy.size)
           enemy.physicsBody?.categoryBitMask = enemyCategory
-          enemy.physicsBody?.collisionBitMask = 0 // No collision
+          enemy.physicsBody?.collisionBitMask = 0 
           enemy.physicsBody?.contactTestBitMask = bulletCategory
       }
 
@@ -62,7 +62,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
             if (contact.bodyA.categoryBitMask == enemyCategory && contact.bodyB.categoryBitMask == bulletCategory) ||
                (contact.bodyB.categoryBitMask == enemyCategory && contact.bodyA.categoryBitMask == bulletCategory) {
-                // Remove the enemy and the bullet from the scene
+         
                 if let enemyNode = contact.bodyA.node as? SKSpriteNode {
                     enemyNode.removeFromParent()
                     if let index = enemies.firstIndex(of: enemyNode) {
@@ -177,7 +177,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for enemy in enemies {
             let offset = player.position - enemy.position
             let direction = offset.normalized()
-            let moveAmount = direction * 1.5 // Slower movement
+            let moveAmount = direction * 1.5 
             
             var newPosition = enemy.position + moveAmount
             newPosition.x = min(max(newPosition.x, minX), maxX)
@@ -193,28 +193,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for enemy in enemies {
             for bullet in bullets {
                 if enemy.intersects(bullet) {
-                    // Remove the bullet from the scene
+              
                     bullet.removeFromParent()
 
-                    // Remove the bullet from the bullets array
                     if let index = bullets.firstIndex(of: bullet) {
                         bullets.remove(at: index)
                     }
 
-                    // Remove the enemy from the scene
                     enemy.removeFromParent()
 
-                    // Remove the enemy from the enemies array
                     if let index = enemies.firstIndex(of: enemy) {
                         enemies.remove(at: index)
                     }
-
-                    // Break out of the bullet loop (no need to check more bullets for this enemy)
+)
                     break
                 }
             }
 
-            // Check for collisions with the player
             if player.intersects(enemy) {
                 gameOver()
                 return
@@ -223,31 +218,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func gameOver() {
-        // Display "Game Over" label
+
         gameOverLabel = SKLabelNode(text: "Game Over. Press F to restart.")
         gameOverLabel?.fontColor = .white
         gameOverLabel?.fontSize = 40
         gameOverLabel?.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(gameOverLabel!)
         
-        // Pause the scene
+
         isPaused = true
     }
 
     func restartGame() {
-        // Remove game over label
+
         gameOverLabel?.removeFromParent()
-        
-        // Reset player position
+
         player.position = CGPoint(x: frame.midX, y: frame.midY)
         
-        // Remove all enemies
         for enemy in enemies {
             enemy.removeFromParent()
         }
         enemies.removeAll()
         
-        // Unpause the scene
         isPaused = false
     }
 }
